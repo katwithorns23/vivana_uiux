@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title> MakeUp 1 </title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/customstyle.css" />
+     <link rel="stylesheet" type="text/css" href="css/navstyle.css">
+  <link rel="stylesheet" type="text/css" href="css/footerstyle.css">
+    <style>
+        .product-container {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        gap: 40px;
+    }
+
+    .product-images {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .image-navigation {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-image-container {
+        position: relative;
+        width: 600px;  
+        height: 500px; 
+        margin-bottom: 20px;
+    }
+
+    .main-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+
+    .image-navigation {
+        position: relative;
+        width: 100%; /* Match container size */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        background: white;
+        border: 1px solid #ddd;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .prev {
+        left: 0;
+    }
+
+    .next {
+        right: 0;
+    }
+
+    .zoom-icon {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        cursor: pointer;
+    }
+
+    .thumbnail-strip {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .thumbnail {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        cursor: pointer;
+        background: #f5f5f5;
+        border: 1px solid #ddd;
+    }
+
+    .product-details {
+        flex: 1;
+        max-width: 450px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin: 0 0 15px 0;
+    }
+
+    .price {
+        margin-bottom: 15px;
+    }
+
+    .original-price {
+        color: #999;
+        text-decoration: line-through;
+        margin-right: 10px;
+    }
+
+    .purchase-controls {
+        display: flex;
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    .quantity-selector {
+        display: flex;
+        border: 1px solid #ddd;
+    }
+
+    .qty-btn {
+        width: 35px;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    .qty-input {
+        width: 50px;
+        text-align: center;
+        border: none;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    .add-cart-btn {
+        padding: 0 20px;
+        background: #f5f5f5;
+        border: 1px solid #ddd;
+        cursor: pointer;
+    }
+
+    .buy-now-btn {
+        width: 100%;
+        padding: 12px;
+        background: #8B7355;
+        color: white;
+        border: none;
+        margin: 10px 0;
+        cursor: pointer;
+    }
+
+    hr {
+        margin: 20px 0;
+        border: none;
+        border-top: 1px solid #ddd;
+    }
+
+    .cart-count {
+    font-weight: bold;
+
+    .social-share{
+        font-size:  100px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+  <a href="landing.html">
+      <i class="fa-solid fa-feather fa-bounce fa-xl" style="color: #54463A;"> VIVANA </i>
+  </a>
+  <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="tips.html">Tips</a>
+      <a href="faq.html">FAQ</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="contactus.html">Contact Us</a>
+  </div>
+  <div class="icons">
+      <a href="history.html"><i class="fas fa-shopping-cart"></i></a>
+      <a href="notification.html"><i class="fas fa-info-circle notification-icon"></i></a>
+      <a href="profile.html"><i class="fas fa-user"></i></a>
+  </div>
+</nav>
+</header>
+
+    <main>
+    <div class="product-container">
+        <!-- Left side - Product Images -->
+        <div class="product-images">
+            <div class="image-navigation">
+                <button class="nav-button prev">‹</button>
+                <div class="main-image-container">
+                    <img src="img/Makeup09.jpg" alt="Dior Addict Lip Glow">
+                    <div class="zoom-icon">🔍</div>
+                </div>
+                <button class="nav-button next">›</button>
+            </div>
+            <div class="thumbnail-strip">
+                <img src="img/dior1.png" class="thumbnail">
+                <img src="img/dior2.png" class="thumbnail">
+                <img src="img/Makeup09.jpg" class="thumbnail">
+            </div>
+        </div>
+    
+        <!-- Right side - Product Details -->
+        <div class="product-details">
+            <h1>Dior Addict Lip Glow</h1>
+            <div class="price">
+                <span class="original-price">$45</span>
+                <span class="current-price">$40</span>
+            </div>
+            
+            <p class="description">A hydrating, color-enhancing lip balm that adapts to your natural lip tone. The 1st Dior lip balm formulated with 97% natural-origin ingredients** that subtly revives the natural color of lips with a custom glow for 6h*** and hydrates lips for 24h.</p>
+            
+            <div class="product-info">
+                <p><span>Vendor:</span> Dior </p>
+                <p><span>SKU:</span> B964002548705</p>
+                <p><span>Availability:</span> In Stock</p>
+                <p><span>Tags:</span> Lipstick, All Products, Balm, Lips, MakeUp, Women, WomenFace</p>
+            </div>
+    
+            <div class="size">
+                <p><span>SHAPE NUMBER:</span> 01</p>
+            </div>
+    
+            <div class="purchase-controls">
+                <div class="quantity-selector">
+                    <button class="qty-btn minus">-</button>
+                    <input type="text" value="1" class="qty-input" min="1">
+                    <button class="qty-btn plus">+</button>
+                </div>
+                <button class="add-cart-btn">ADD TO CART</button>
+                <button class="wishlist-btn">♡</button>
+            </div>
+    
+            <a href="cart.html"><button class="buy-now-btn">BUY IT NOW</button></a>
+    
+            <div class="social-share">
+                Share: <a href="https://facebook.com" class="facebook"> ❤ </a> 
+                <a href="https://instagram.com" class="instagram">📷</a>
+            </div>
+    
+            <p class="stock-status">In Stock</p>
+    
+            <hr>
+    
+            <div class="delivery-section">
+                <h3>Delivery & Returns</h3>
+                <p>We offer fast and reliable delivery with tracking to ensure your beauty essentials arrive on time. If you're not completely satisfied, we provide a hassle-free return policy, allowing you to return unopened products within X days for a refund or exchange. Simply contact our support team or visit our Returns page to initiate the process smoothly. Your satisfaction is our priority! </p>
+            </div>
+    
+            <div class="return-policy">
+                <a href="faq.html"><p>Our Return Policy</p></a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="information">
+        <h3>Information</h3>
+        <a href="aboutus.html"><p>About Us</p></a>
+        <a href="contactus.html"><p>Contact</p></a>
+        <a href="faq.html"><p>Terms of Service</p></a>
+        <a href="privacy.html>"><p>Privacy Policy</p></a>
+    </div>
+
+    <div class="stay-connected">
+        <h3>Stay Connected</h3>
+        <div class="social-icons">
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <div class="newsletter">
+        <h3>Sign up for our newsletter</h3>
+        <div class="newsletter-form">
+            <input type="email" placeholder="Enter email">
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const dropBtn = document.querySelector('.dropbtn');
+    const dropContent = document.querySelector('.dropdown-content');
+    
+    dropBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        dropContent.classList.toggle('show');
+    });
+    
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function(e) {
+        if (!e.target.matches('.dropbtn')) {
+            if (dropContent.classList.contains('show')) {
+                dropContent.classList.remove('show');
+            }
+        }
+    });
+});
+
+// Quantity controls
+const minusBtn = document.querySelector('.qty-btn.minus');
+                const plusBtn = document.querySelector('.qty-btn.plus');
+                const qtyInput = document.querySelector('.qty-input');
+                const wishlistBtn = document.querySelector('.wishlist-btn');
+
+                // Handle minus button click
+                minusBtn.addEventListener('click', () => {
+                    let currentValue = parseInt(qtyInput.value);
+                    if (currentValue > 1) {
+                        qtyInput.value = currentValue - 1;
+                    }
+                });
+
+                // Handle plus button click
+                plusBtn.addEventListener('click', () => {
+                    let currentValue = parseInt(qtyInput.value);
+                    qtyInput.value = currentValue + 1;
+                });
+
+                // Handle wishlist button click
+                let isWishlisted = false;
+                wishlistBtn.addEventListener('click', () => {
+                    isWishlisted = !isWishlisted;
+                    wishlistBtn.innerHTML = isWishlisted ? '♥' : '♡';
+                });
+</script>
+</html>
+
+    
+    
+
+        
+            
+                
+

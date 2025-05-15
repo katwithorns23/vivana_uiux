@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title> Skin Types </title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/customstyle.css" />
+     <link rel="stylesheet" type="text/css" href="css/navstyle.css">
+  <link rel="stylesheet" type="text/css" href="css/footerstyle.css">
+<style>
+.skin-type-section {
+    margin-bottom: 2rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skin-type-header {
+    background-color: #F7E7CE;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.skin-type-header h2 {
+    color: #54463A;
+    font-family: parata, serif;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.card-container {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.characteristics-card, .care-tips-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.characteristics-card h3, .care-tips-card h3 {
+    color: #54463A;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.skin-type-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.intro-section {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    padding: 0 1rem;
+}
+
+.intro-section h1 {
+    font-size: 2.2rem;
+    color: #54463A;
+}
+
+.conclusion-section {
+    background-color: #F7E7CE;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.conclusion-section h2 {
+    font-size: 1.8rem;
+    color: #54463A;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 0.95rem;
+}
+
+ul li {
+    padding: 0.4rem 0;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+ul li:before {
+    content: "•";
+    color: #54463A;
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+    }
+    
+    .skin-type-section {
+        padding: 0 1rem;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+  <a href="landing.html">
+      <i class="fa-solid fa-feather fa-bounce fa-xl" style="color: #54463A;"> VIVANA </i>
+  </a>
+  <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="tips.html">Tips</a>
+      <a href="faq.html">FAQ</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="contactus.html">Contact Us</a>
+  </div>
+  <div class="icons">
+      <a href="history.html"><i class="fas fa-shopping-cart"></i></a>
+      <a href="notification.html"><i class="fas fa-info-circle notification-icon"></i></a>
+      <a href="profile.html"><i class="fas fa-user"></i></a>
+  </div>
+</nav>
+</header>
+<br>
+    <main>
+<div class="container">
+    <div class="intro-section">
+        <h1>Understanding Different Skin Types and How to Care for Them</h1>
+        <p class="lead">Our skin is unique, and knowing your skin type is essential for choosing the right skincare routine. Here's a detailed breakdown of the five main skin types, their characteristics, and how to care for them.</p>
+    </div>
+
+    <!-- Normal Skin -->
+    <div class="skin-type-section">
+        <div class="skin-type-header">
+            <h2>1. Normal Skin</h2>
+        </div>
+        <img src="img/skintype2.png" alt="Normal Skin Type" class="skin-type-image">
+        <div class="card-container">
+            <div class="characteristics-card">
+                <h3>Characteristics:</h3>
+                <ul>
+                    <li>Well-balanced moisture and oil levels</li>
+                    <li>Few blemishes or imperfections</li>
+                    <li>Small pores and an even skin tone</li>
+                    <li>Soft and smooth texture</li>
+                </ul>
+            </div>
+            <div class="care-tips-card">
+                <h3>Care Tips:</h3>
+                <ul>
+                    <li>Use a gentle cleanser to maintain balance</li>
+                    <li>Apply a lightweight, hydrating moisturizer</li>
+                    <li>Wear sunscreen daily to prevent premature aging</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Oily Skin -->
+    <div class="skin-type-section">
+        <div class="skin-type-header">
+            <h2>2. Oily Skin</h2>
+        </div>
+        <img src="img/skintype3.png" alt="Oily Skin Type" class="skin-type-image">
+        <div class="card-container">
+            <div class="characteristics-card">
+                <h3>Characteristics:</h3>
+                <ul>
+                    <li>Excess oil production, leading to a shiny appearance</li>
+                    <li>Prone to acne, blackheads, and enlarged pores</li>
+                    <li>Thick texture with a tendency to break out</li>
+                </ul>
+            </div>
+            <div class="care-tips-card">
+                <h3>Care Tips:</h3>
+                <ul>
+                    <li>Use a foaming or gel-based cleanser</li>
+                    <li>Apply a lightweight, oil-free moisturizer</li>
+                    <li>Incorporate salicylic acid or niacinamide</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dry Skin -->
+    <div class="skin-type-section">
+        <div class="skin-type-header">
+            <h2>3. Dry Skin</h2>
+        </div>
+        <img src="img/skintype4.png" alt="Dry Skin Type" class="skin-type-image">
+        <div class="card-container">
+            <div class="characteristics-card">
+                <h3>Characteristics:</h3>
+                <ul>
+                    <li>Lack of natural oils, leading to tightness</li>
+                    <li>Rough patches and irritation</li>
+                    <li>More visible fine lines and dull appearance</li>
+                </ul>
+            </div>
+            <div class="care-tips-card">
+                <h3>Care Tips:</h3>
+                <ul>
+                    <li>Use a creamy, hydrating cleanser</li>
+                    <li>Apply a rich, nourishing moisturizer</li>
+                    <li>Avoid hot showers and harsh exfoliants</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Combination Skin -->
+    <div class="skin-type-section">
+        <div class="skin-type-header">
+            <h2>4. Combination Skin</h2>
+        </div>
+        <img src="img/skintype5.png" alt="Combination Skin Type" class="skin-type-image">
+        <div class="card-container">
+            <div class="characteristics-card">
+                <h3>Characteristics:</h3>
+                <ul>
+                    <li>Oily T-zone with dry or normal cheeks</li>
+                    <li>Prone to occasional breakouts</li>
+                    <li>Pores may appear larger in oily areas</li>
+                </ul>
+            </div>
+            <div class="care-tips-card">
+                <h3>Care Tips:</h3>
+                <ul>
+                    <li>Use a mild, balancing cleanser</li>
+                    <li>Apply different moisturizers for different areas</li>
+                    <li>Use targeted treatments on the T-zone</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sensitive Skin -->
+    <div class="skin-type-section">
+        <div class="skin-type-header">
+            <h2>5. Sensitive Skin</h2>
+        </div>
+        <img src="img/skintype6.png" alt="Sensitive Skin Type" class="skin-type-image">
+        <div class="card-container">
+            <div class="characteristics-card">
+                <h3>Characteristics:</h3>
+                <ul>
+                    <li>Easily irritated by products and weather</li>
+                    <li>Prone to redness and itching</li>
+                    <li>May react to fragrances and chemicals</li>
+                </ul>
+            </div>
+            <div class="care-tips-card">
+                <h3>Care Tips:</h3>
+                <ul>
+                    <li>Use gentle, fragrance-free products</li>
+                    <li>Look for calming ingredients</li>
+                    <li>Always patch-test new products</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="conclusion-section">
+        <h2>Conclusion</h2>
+        <p>Understanding your skin type is key to achieving healthy and radiant skin. With the right skincare routine tailored to your needs, you can keep your skin balanced, clear, and glowing. Always remember to stay hydrated, follow a consistent routine, and protect your skin from the sun!</p>
+    </div>
+</div>
+</main>
+
+<br>
+<footer>
+    <div class="information">
+        <h3>Information</h3>
+        <a href="aboutus.html"><p>About Us</p></a>
+        <a href="contactus.html"><p>Contact</p></a>
+        <a href="faq.html"><p>Terms of Service</p></a>
+        <a href="privacy.html>"><p>Privacy Policy</p></a>
+    </div>
+
+    <div class="stay-connected">
+        <h3>Stay Connected</h3>
+        <div class="social-icons">
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <div class="newsletter">
+        <h3>Sign up for our newsletter</h3>
+        <div class="newsletter-form">
+            <input type="email" placeholder="Enter email">
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const dropBtn = document.querySelector('.dropbtn');
+    const dropContent = document.querySelector('.dropdown-content');
+    
+    dropBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        dropContent.classList.toggle('show');
+    });
+    
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function(e) {
+        if (!e.target.matches('.dropbtn')) {
+            if (dropContent.classList.contains('show')) {
+                dropContent.classList.remove('show');
+            }
+        }
+    });
+});
+</script>
+</html>
+
+
+
+
+
+

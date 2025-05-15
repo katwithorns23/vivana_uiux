@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title> Daily Skin Care </title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/customstyle.css" />
+     <link rel="stylesheet" type="text/css" href="css/navstyle.css">
+  <link rel="stylesheet" type="text/css" href="css/footerstyle.css">
+<style>
+.skincare-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.intro-section {
+    background: linear-gradient(135deg, #F7E7CE 0%, #fff 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.intro-section h1 {
+    color: #54463A;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.routine-box {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.routine-box:hover {
+    transform: translateY(-5px);
+}
+
+.routine-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #F7E7CE;
+    padding-bottom: 1rem;
+}
+
+.routine-icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.routine-title {
+    color: #54463A;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.step-card {
+    background: #fafafa;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid #54463A;
+}
+
+.step-number {
+    color: #54463A;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.step-content {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.tip-item {
+    background: #F7E7CE;
+    padding: 1.2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.tip-icon {
+    font-size: 1.5rem;
+    color: #54463A;
+    margin-bottom: 0.5rem;
+}
+
+.tip-text {
+    color: #54463A;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.final-note {
+    background: #54463A;
+    color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.final-note h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.final-note p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .skincare-container {
+        padding: 0 0.8rem;
+    }
+    
+    .intro-section h1 {
+        font-size: 1.6rem;
+    }
+    
+    .routine-title {
+        font-size: 1.3rem;
+    }
+    
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+  <a href="landing.html">
+      <i class="fa-solid fa-feather fa-bounce fa-xl" style="color: #54463A;"> VIVANA </i>
+  </a>
+  <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="tips.html">Tips</a>
+      <a href="faq.html">FAQ</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="contactus.html">Contact Us</a>
+  </div>
+  <div class="icons">
+      <a href="history.html"><i class="fas fa-shopping-cart"></i></a>
+      <a href="notification.html"><i class="fas fa-info-circle notification-icon"></i></a>
+      <a href="profile.html"><i class="fas fa-user"></i></a>
+  </div>
+</nav>
+</header>
+
+    <main>
+<div class="skincare-container">
+    <section class="intro-section">
+        <h1>Essential Daily Skincare Routine</h1>
+        <p>Your guide to achieving healthy, glowing skin through consistent care</p>
+    </section>
+
+    <div class="routine-box">
+        <div class="routine-header">
+            <span class="routine-icon">🌞</span>
+            <h2 class="routine-title">Morning Routine</h2>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-number">Step 1: Cleanser</div>
+            <div class="step-content">
+                <ul>
+                    <li>Use gentle cleanser suited to your skin type</li>
+                    <li>Remove overnight buildup</li>
+                    <li>Choose hydrating or foaming formula based on skin type</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">Step 2: Toner</div>
+            <div class="step-content">
+                <ul>
+                    <li>Balance pH levels</li>
+                    <li>Use alcohol-free formulations</li>
+                    <li>Prep skin for following products</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">Step 3: Serum & Moisturizer</div>
+            <div class="step-content">
+                <ul>
+                    <li>Apply vitamin C or hyaluronic acid serum</li>
+                    <li>Lock in with appropriate moisturizer</li>
+                    <li>Finish with SPF 30+ protection</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="routine-box">
+        <div class="routine-header">
+            <span class="routine-icon">🌙</span>
+            <h2 class="routine-title">Evening Routine</h2>
+        </div>
+        
+        <div class="step-card">
+            <div class="step-number">Step 1: Double Cleanse</div>
+            <div class="step-content">
+                <ul>
+                    <li>First cleanse with oil-based cleanser</li>
+                    <li>Second cleanse with water-based cleanser</li>
+                    <li>Ensure all makeup and SPF is removed</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">Step 2: Treatment</div>
+            <div class="step-content">
+                <ul>
+                    <li>Apply retinol or active ingredients</li>
+                    <li>Use targeted treatments for specific concerns</li>
+                    <li>Allow products to absorb properly</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">Step 3: Hydration</div>
+            <div class="step-content">
+                <ul>
+                    <li>Apply eye cream gently</li>
+                    <li>Use richer night moisturizer</li>
+                    <li>Consider facial oils for extra nourishment</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="tips-grid">
+        <div class="tip-item">
+            <div class="tip-icon">💧</div>
+            <p class="tip-text">Stay hydrated with plenty of water throughout the day</p>
+        </div>
+        <div class="tip-item">
+            <div class="tip-icon">🥗</div>
+            <p class="tip-text">Maintain a balanced diet rich in antioxidants</p>
+        </div>
+        <div class="tip-item">
+            <div class="tip-icon">😴</div>
+            <p class="tip-text">Get 7-9 hours of quality sleep each night</p>
+        </div>
+        <div class="tip-item">
+            <div class="tip-icon">🧴</div>
+            <p class="tip-text">Always patch test new skincare products</p>
+        </div>
+    </div>
+
+    <div class="final-note">
+        <h2>Remember</h2>
+        <p>Consistency is key in skincare. Listen to your skin's needs and adjust your routine accordingly. With patience and dedication, you'll achieve the healthy, glowing skin you desire.</p>
+    </div>
+</div>
+
+</main>
+
+<footer>
+    <div class="information">
+        <h3>Information</h3>
+        <a href="aboutus.html"><p>About Us</p></a>
+        <a href="contactus.html"><p>Contact</p></a>
+        <a href="faq.html"><p>Terms of Service</p></a>
+        <a href="privacy.html>"><p>Privacy Policy</p></a>
+    </div>
+
+    <div class="stay-connected">
+        <h3>Stay Connected</h3>
+        <div class="social-icons">
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <div class="newsletter">
+        <h3>Sign up for our newsletter</h3>
+        <div class="newsletter-form">
+            <input type="email" placeholder="Enter email">
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const dropBtn = document.querySelector('.dropbtn');
+    const dropContent = document.querySelector('.dropdown-content');
+    
+    dropBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        dropContent.classList.toggle('show');
+    });
+    
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function(e) {
+        if (!e.target.matches('.dropbtn')) {
+            if (dropContent.classList.contains('show')) {
+                dropContent.classList.remove('show');
+            }
+        }
+    });
+});
+</script>
+</html>
+
+

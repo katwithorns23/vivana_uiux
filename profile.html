@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title> Profile </title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/customstyle.css" />
+     <link rel="stylesheet" type="text/css" href="css/navstyle.css">
+  <link rel="stylesheet" type="text/css" href="css/footerstyle.css">
+    <style>
+        :root {
+            --primary-color: #AC7374;
+            --secondary-color: #F7E7CE;
+            --text-color: #333;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .profile-card {
+            background: #fffff0;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 2rem;
+            animation: fadeIn 0.5s ease;
+        }
+
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-color);
+        }
+
+        .edit-profile-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--primary-color);
+            color: #fffff0;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+
+        }
+
+        .edit-profile-btn:hover {
+            background: #F7E7CE;
+            transform: translateY(-2px);
+        }
+
+
+        .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds space between buttons */
+}
+
+.button-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.edit-profile {
+    background-color: #AC7374; /* Pink color */
+    color: #fffff0;
+}
+
+
+.log-out {
+    background-color: #DC3545; /* Red color */
+    color: #fffff0;
+}
+
+        .log-out-profile-btn {
+            position: absolute;
+            top: 4rem;
+            right: 1rem;
+            background: #AC7374;
+            color: #fffff0;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+
+        }
+
+        .log-out-profile-btn:hover {
+            background: #c82333;
+            transform: translateY(-2px);
+        }
+
+        .profile-info h1 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .stat-label {
+            color: #666;
+            margin-top: 0.5rem;
+        }
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .achievement-card {
+            background: #fffff0;
+            padding: 1rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .achievement-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .personal-details {
+        background: #fffff0;
+        border-radius: 15px;
+        padding: 2rem;
+        margin-top: 1rem;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+
+    .details-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .details-row:last-child {
+        margin-bottom: 0;
+    }
+
+    .detail-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        background: var(--secondary-color);
+        border-radius: 10px;
+        transition: var(--transition);
+    }
+
+    .detail-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .detail-item i {
+        color: var(--primary-color);
+        font-size: 1.2rem;
+        width: 24px;
+        text-align: center;
+    }
+
+    .detail-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .detail-label {
+        font-size: 0.85rem;
+        color: #666;
+        margin-bottom: 0.2rem;
+    }
+
+    .detail-value {
+        color: var(--text-color);
+        font-weight: 500;
+    }
+    </style>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+  <a href="landing.html">
+      <i class="fa-solid fa-feather fa-bounce fa-xl" style="color: #54463A;"> VIVANA </i>
+  </a>
+  <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="tips.html">Tips</a>
+      <a href="faq.html">FAQ</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="contactus.html">Contact Us</a>
+  </div>
+  <div class="icons">
+      <a href="history.html"><i class="fas fa-shopping-cart"></i></a>
+      <a href="notification.html"><i class="fas fa-info-circle notification-icon"></i></a>
+      <a href="profile.html"><i class="fas fa-user"></i></a>
+  </div>
+</nav>
+</header>
+
+<main>
+    <div class="container">
+        <div class="profile-card">
+            <div class="profile-header">
+                <img src="img/profile.png" alt="Profile" class="profile-image">
+                <div class="profile-info">
+                    <h1>Sarah Johnson</h1>
+                    <span class="premium-badge">Premium Member</span>
+                    <div class="beauty-points">
+                        <span>⭐ 2,500 Beauty Points</span>
+                    </div>
+                </div>
+
+                <div class="button-container">
+                <a href="profileEdit.html">
+                    <button class="edit-profile-btn">Edit Profile</button>
+                </a>
+
+                <a href="landing.html">
+                <button class="log-out-profile-btn">Log Out</button>
+            </a>
+        </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">42</div>
+                    <div class="stat-label">Reviews Written</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">156</div>
+                    <div class="stat-label">Products Purchased</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">15</div>
+                    <div class="stat-label">Achievements</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">Gold</div>
+                    <div class="stat-label">Member Status</div>
+                </div>
+            </div>
+
+            <!-- Add new personal details section -->
+            <h2 style="margin-top: 3rem;">Personal Details</h2>
+            <div class="personal-details">
+                <div class="details-row">
+                    <div class="detail-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="detail-content">
+                            <span class="detail-label">Email</span>
+                            <span class="detail-value">katherina.han23@email.com</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="detail-content">
+                            <span class="detail-label">Phone</span>
+                            <span class="detail-value">09-401234567</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="details-row">
+                    <div class="detail-item">
+                        <i class="fas fa-globe"></i>
+                        <div class="detail-content">
+                            <span class="detail-label">Region</span>
+                            <span class="detail-value">Yangon</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="details-row">
+                    <div class="detail-item">
+                        <i class="fas fa-venus-mars"></i>
+                        <div class="detail-content">
+                            <span class="detail-label">Gender</span>
+                            <span class="detail-value">Female</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div class="detail-content">
+                            <span class="detail-label">Member Since</span>
+                            <span class="detail-value">January 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="details-row">
+                    <div class="detail-item">
+                        <i class="fas fa-star"></i>
+                        <div class="detail-content">
+                            <span class="detail-label">Skin Type</span>
+                            <span class="detail-value">Combination</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 3rem;">Recent Achievements</h2>
+            <div class="achievement-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">👑</div>
+                    <h3>Beauty Expert</h3>
+                    <p>Wrote 40+ detailed reviews</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">⭐</div>
+                    <h3>Top Reviewer</h3>
+                    <p>Most helpful reviews this month</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">🎉</div>
+                    <h3>Early Adopter</h3>
+                    <p>Member since 2022</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">🛍️</div>
+                    <h3>Shopping Spree</h3>
+                    <p>Made 100+ purchases</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<footer>
+    <div class="information">
+        <h3>Information</h3>
+        <p>About Us</p>
+        <p>Contact</p>
+        <p>Terms of Service</p>
+        <p>Privacy Policy</p>
+    </div>
+
+    <div class="stay-connected">
+        <h3>Stay Connected</h3>
+        <div class="social-icons">
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <div class="newsletter">
+        <h3>Sign up for our newsletter</h3>
+        <div class="newsletter-form">
+            <input type="email" placeholder="Enter email">
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const dropBtn = document.querySelector('.dropbtn');
+    const dropContent = document.querySelector('.dropdown-content');
+    
+    dropBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        dropContent.classList.toggle('show');
+    });
+    
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function(e) {
+        if (!e.target.matches('.dropbtn')) {
+            if (dropContent.classList.contains('show')) {
+                dropContent.classList.remove('show');
+            }
+        }
+    });
+});
+</script>
+</html>

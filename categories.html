@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title> vivana.com </title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/customstyle.css" />
+     <link rel="stylesheet" type="text/css" href="css/navstyle.css">
+  <link rel="stylesheet" type="text/css" href="css/footerstyle.css">
+
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+
+     <style>
+    body {
+      font-family: Prompt, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #faf7f2;
+    }
+
+    h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+    .product-title {
+      margin: 10px 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .buy-now {
+      font-size: 16px;
+      color: #007bff;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .buy-now:hover {
+      text-decoration: underline;
+    }
+
+    .product-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            height:   100%;
+            display:  flex;
+            flex-direction:   column;
+            align-items:  center;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+        max-width: 250px;
+        width: 100%;
+        object-fit: contain;
+    }
+
+        .product-image {
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            width:  200px;
+            min-height: 300px;
+            display:  flex;
+            justify-content:  center;
+            align-items:  center;
+            padding:  2rem;
+            transition:   transform 0.3s ease;
+        }
+
+        .product-image:hover {
+        transform: scale(1.05);
+    }
+
+        .product-title {
+            color: #333;
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .btn-primary {
+            background-color: #d2b48c !important;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(197, 168, 128, 0.2);
+    }
+
+        .btn-primary:hover {
+            background-color: #c4a378 !important;
+            transform: translateY(-2px);
+        }
+
+        .section-title {
+            color: #d2b48c;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .product-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+@media (max-width: 768px) {
+        .product-image {
+            padding: 1rem;
+        }
+        
+        .text-md-start {
+            text-align: center !important;
+        }
+        .col-md-4 {
+            text-align: center !important;
+        }
+    }
+  </style>
+
+  </head>
+ 
+     <body>
+    <header>
+    <nav class="navbar">
+  <a href="landing.html">
+      <i class="fa-solid fa-feather fa-bounce fa-xl" style="color: #54463A;"> VIVANA </i>
+  </a>
+  <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="tips.html">Tips</a>
+      <a href="faq.html">FAQ</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="contactus.html">Contact Us</a>
+  </div>
+  <div class="icons">
+      <a href="history.html"><i class="fas fa-shopping-cart"></i></a>
+      <a href="notification.html"><i class="fas fa-info-circle notification-icon"></i></a>
+      <a href="profile.html"><i class="fas fa-user"></i></a>
+  </div>
+</nav>
+</header>
+
+<main>   
+    <!-- Makeup Section -->
+    <section class="container my-5">
+        <h2 class="section-title">Make-up</h2>
+        <div class="swiper makeupSwiper">
+            <div class="swiper-wrapper">
+                <!-- Product Card 1 -->
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <div class="product-image">
+                          <div class="image-container">
+                            <img src="img/Makeup09.jpg" class="img-fluid" alt="Ubtan Facial"></div>
+                        </div>
+                        <h3 class="product-title">Dior Addict Lip Glow</h3>
+                        <p class="product-description"> $40 </p>
+                        <a href="makeup1.html"><button class="btn btn-dark px-4 rounded-pill">Buy Now</button></a>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <div class="product-image">
+                          <div class="image-container">
+                            <img src="img/Makeup02.jpg" class="img-fluid" alt="Ubtan Facial"></div>
+                        </div>
+                        <h3 class="product-title">e.l.f. Hydrating Camo Concealer</h3>
+                        <p class="product-description">$7</p>
+                        <button class="btn btn-dark px-4 rounded-pill">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <div class="product-image">
+                          <div class="image-container">
+                            <img src="img/Makeup03.jpg" class="img-fluid" alt="Ubtan Facial"></div>
+                        </div>
+                        <h3 class="product-title">Laura Mercier Translucent Loose Setting Powder</h3>
+                        <p class="product-description">$42</p>
+                        <button class="btn btn-dark px-4 rounded-pill">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <div class="product-image">
+                          <div class="image-container">
+                            <img src="img/Makeup04.jpg" class="img-fluid" alt="Ubtan Facial"></div>
+                        </div>
+                        <h3 class="product-title">Anastasia Beverly Hills Brow Wiz</h3>
+                        <p class="product-description">$24</p>
+                        <button class="btn btn-dark px-4 rounded-pill">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Skincare Section -->
+    <section class="container my-5">
+        <h2 class="section-title">Skin-care</h2>
+        <div class="swiper skincareSwiper">
+            <div class="swiper-wrapper">
+                <!-- Product Card 1 -->
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <div class="product-image">
+                          <div class="image-container">
+                            <img src="img/Skincare01.jpg" class="img-fluid" alt="Ubtan Facial"></div>
+                        </div>
+                        <h3 class="product-title">CeraVe Hydrating Facial Cleanser</h3>
+                        <p class="product-description">$14</p>
+                        <button class="btn btn-dark px-4 rounded-pill">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <div class="product-image">
+                          <div class="image-container">
+                            <img src="img/Skincare02.jpg" class="img-fluid" alt="Ubtan Facial"></div>
+                        </div>
+                        <h3 class="product-title">La Roche-Posay Effaclar Medicated Gel Cleanser</h3>
+                        <p class="product-description">$17</p>
+                        <button class="btn btn-dark px-4 rounded-pill">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <div class="product-image">
+                          <div class="image-container">
+                            <img src="img/Skincare03.jpg" class="img-fluid" alt="Ubtan Facial">
+                          </div>
+                        </div>
+                        <h3 class="product-title">Paula’s Choice Skin Perfecting 2% BHA Liquid Exfoliant</h3>
+                        <p class="product-description">$35</p>
+                        <button class="btn btn-dark px-4 rounded-pill">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="swiper-slide">
+                    <div class="product-card">
+                        <div class="product-image">
+                          <div class="image-container">
+                            <img src="img/Skincare04.jpg" class="img-fluid" alt="Ubtan Facial">
+                          </div>
+                        </div>
+                        <h3 class="product-title">Thayers Witch Hazel Toner (Unscented or Rose Petal)</h3>
+                        <p class="product-description">$11</p>
+                        <button class="btn btn-dark px-4 rounded-pill">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+
+<section class="container my-5">
+    <h2 class="section-title">Additional Products</h2>
+    <div class="row justify-content-center g-4">
+        <!-- Product Card 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-card text-center">
+                <h3 class="product-title">Real Techniques Everyday Essentials Brush Set</h3>
+                <p class="product-description mb-4">$23</p>
+                <div class="product-image mb-4">
+                  <div class="image-container">
+                    <img src="img/Applier01.jpg" class="img-fluid" alt="Product">
+                  </div>
+                </div>
+                <button class="btn btn-dark px-4 rounded-pill">Add To Cart</button>
+            </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-card text-center">
+                <h3 class="product-title">Morphe M439 Deluxe Buffer Brush</h3>
+                <p class="product-description mb-4">$17</p>
+                <div class="product-image mb-4">
+                  <div class="image-container">
+                    <img src="img/Applier02.jpg" class="img-fluid" alt="Product">
+                  </div>
+                </div>
+                <button class="btn btn-dark px-4 rounded-pill">Add To Cart</button>
+            </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="product-card text-center">
+                <h3 class="product-title">Sigma F80 Flat Kabuki Brush</h3>
+                <p class="product-description mb-4">$27</p>
+                <div class="product-image mb-4">
+                  <div class="image-container">
+                    <img src="img/Applier03.jpg" class="img-fluid" alt="Product">
+                  </div>
+                </div>
+                <button class="btn btn-dark px-4 rounded-pill">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5">
+    <h2 class="section-title mb-5" style="color: #666;">Additional Products II</h2>
+    
+    <!-- Product 1 -->
+    <div class="row align-items-center mb-4">
+        <div class="col-md-3">
+            <div class="product-image">
+                <img src="img/Applier12.jpg" class="img-fluid" alt="Product" style="max-width: 200px;">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h3 class="product-title" style="color: #C5A880; font-size: 1.5rem;">Zoeva 110 Face Shape Brush</h3>
+            <p class="product-description" style="color: #666; font-size: 0.9rem;">
+                $19
+            </p>
+            <button class="btn btn-dark px-4 rounded-pill">Add To Cart</button>
+        </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="row align-items-center justify-content-end mb-4">
+        <div class="col-md-4 text-end">
+            <h3 class="product-title" style="color: #C5A880; font-size: 1.5rem;">Tarte Quick Stick Waterproof Shadow & Liner Brush</h3>
+            <p class="product-description" style="color: #666; font-size: 0.9rem;">
+                $24
+            </p>
+            <button class="btn btn-dark px-4 rounded-pill">Add To Cart</button>
+        </div>
+        <div class="col-md-3">
+            <div class="product-image">
+                <img src="img/Applier11.jpg" class="img-fluid" alt="Product" style="max-width: 200px;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="row align-items-center mb-4">
+        <div class="col-md-3">
+            <div class="product-image">
+                <img src="img/Applier10.jpg" class="img-fluid" alt="Product" style="max-width: 200px;">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h3 class="product-title" style="color: #C5A880; font-size: 1.5rem;">Tweezerman Slant Tweezers</h3>
+            <p class="product-description" style="color: #666; font-size: 0.9rem;">
+                $22
+            </p>
+            <button class="btn btn-dark px-4 rounded-pill">Add To Cart</button>
+        </div>
+    </div>
+</section>
+
+
+   <footer>
+    <div class="information">
+        <h3>Information</h3>
+        <p>About Us</p>
+        <p>Contact</p>
+        <p>Terms of Service</p>
+        <p>Privacy Policy</p>
+    </div>
+
+    <div class="stay-connected">
+        <h3>Stay Connected</h3>
+        <div class="social-icons">
+           <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <div class="newsletter">
+        <h3>Sign up for our newsletter</h3>
+        <div class="newsletter-form">
+            <input type="email" placeholder="Enter email">
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</footer>
+<!-- Footer -->
+    <!-- MDB -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".makeupSwiper, .skincareSwiper", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 4,
+                }
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const dropBtn = document.querySelector('.dropbtn');
+    const dropContent = document.querySelector('.dropdown-content');
+    
+    dropBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        dropContent.classList.toggle('show');
+    });
+    
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function(e) {
+        if (!e.target.matches('.dropbtn')) {
+            if (dropContent.classList.contains('show')) {
+                dropContent.classList.remove('show');
+            }
+        }
+    });
+});
+    </script>
+  </body>
+</html>

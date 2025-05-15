@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title> vivana.com </title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/customstyle.css" />
+     <link rel="stylesheet" type="text/css" href="css/navstyle.css">
+  <link rel="stylesheet" type="text/css" href="css/footerstyle.css">
+   <style>
+       h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+        color: #AC7434;
+      }
+      h2 {
+        font-family: 'Playfair Display', serif;
+        color: #AC7434 !important;
+        margin: 2rem 0;
+        letter-spacing: 0.5px;
+      }
+      .product-col {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.product-col:hover {
+    transform: translateY(-10px);
+}
+
+.product-col h4 {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+.product-section h2 {
+    color: #8B7355;  /* Brown/neutral color for the heading */
+    font-family: serif;  /* Similar to the image's font */
+    margin-bottom: 2rem;
+}
+
+.img-fluid {
+    border: 2px solid #f5f5f5;  /* Light border around images */
+    transition: all 0.3s ease;
+}
+
+.product-col:hover .img-fluid {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+      .hero-section {
+        height: 600px !important;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .product-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.product-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s ease;
+    max-width: 400px; /* Maximum width for each card */
+    margin: 0 auto;
+}
+
+.product-card h3 {
+    font-size: 1.5rem; /* Larger font size */
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 1.1rem; /* Larger font size */
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.product-image {
+    margin: 30px 0;
+}
+
+.product-image img {
+    max-width: 300px; /* Larger image size */
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.add-to-cart {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px 30px; /* Larger button */
+    border-radius: 5px;
+    font-size: 1.1rem; /* Larger font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-section h2 {
+    color: #8B5E3C; /* Brown color for heading */
+    font-size: 2.5rem; /* Larger heading */
+    font-weight: normal;
+    margin-bottom: 50px;
+}
+
+/* Increased spacing between cards */
+.g-5 {
+    --bs-gutter-x: 3rem;
+    --bs-gutter-y: 3rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #e67e22;
+}
+
+.modern-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.modern-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image {
+    position: relative;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    overflow: hidden;
+}
+
+.card-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.modern-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modern-card:hover .hover-overlay {
+    opacity: 1;
+}
+
+.quick-add {
+    background: white;
+    color: #333;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.quick-add:hover {
+    background: #e67e22;
+    color: white;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.3rem;
+    color: #e67e22;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.rating {
+    color: #f1c40f;
+}
+
+.rating i {
+    margin: 0 2px;
+}
+
+.section-wrapper {
+    background: white;
+    border-radius: 25px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    max-width: 1400px; /* Adjust based on your needs */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-spacing {
+    height: 40px; /* Space between sections */
+}
+
+.section-title {
+    color: #8B5E3C;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: serif; /* Or your preferred font */
+}
+
+.product-section {
+    padding: 20px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section-wrapper {
+        border-radius: 15px;
+        padding: 30px 15px;
+        margin: 0 15px;
+    }
+
+    .section-spacing {
+        height: 30px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+   </style>
+  </head>
+<body>
+    <header>
+    <nav class="navbar">
+  <a href="landing.html">
+      <i class="fa-solid fa-feather fa-bounce fa-xl" style="color: #54463A;"> VIVANA </i>
+  </a>
+  <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="tips.html">Tips</a>
+      <a href="faq.html">FAQ</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="contactus.html">Contact Us</a>
+  </div>
+  <div class="icons">
+      <a href="history.html"><i class="fas fa-shopping-cart"></i></a>
+      <a href="notification.html"><i class="fas fa-info-circle notification-icon"></i></a>
+      <a href="profile.html"><i class="fas fa-user"></i></a>
+  </div>
+</nav>
+</header>
+
+<main>
+<div class="hero-section p-5 text-center bg-image"
+    style="background-image: url('img/home1.jpg');">
+    <div class="container">
+        <div class="row align-items-center" style="height: 500px;">
+            <div class="col-md-6 text-start">
+                <h1 class="mb-3">Care For Your Skin,</h1>
+                <h1 class="mb-3">Care For Your</h1>
+                <h1 class="mb-4">Beauty</h1>
+                <p class="lead mb-4">Our skin care clinic best dermatologists in Lahore and Islamabad offer premium aesthetics.</p>
+                <a data-mdb-ripple-init class="btn btn-outline-dark btn-lg" href="aboutus.html" role="button">See More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Space between sections -->
+<div class="section-spacing"></div>
+
+<div class="section-wrapper">
+<div class="product-section container">
+    <h2 class="text-center mb-5">Shop by Skin Concerns</h2>
+    <div class="row justify-content-center">
+    <div class="col" style="width: 50px" align="center"><img style="width: 300px; height: 300px;" src ="img/p1.jpg" 
+  class="img-thumbnail"
+  alt="The Ordinary Hyaluronic Acid"/> 
+  <br> <br>
+  <h4 align="center"><b>The Ordinary Hyaluronic Acid</b></h4>
+  <h4 align="center" style="color: #AC7434;"><b>$19.99</b></h4>
+  <h5>Provides immediate, long-lasting hydration for smoother, plumper, and healthier-looking skin.</h5>
+  <button class="btn btn-dark px-4 rounded-pill">Buy Now</button>
+  </div>
+
+        <div class="col" style="width: 50px" align="center"><img style="width: 300px; height: 300px;" src ="img/p2.jpg" 
+  class="img-thumbnail"
+  alt="CeraVe Moisturizing Cream"/> 
+  <br> <br>
+  <h4 align="center"><b>CeraVe Moisturizing Cream 454g</b></h4>
+  <h4 align="center" style="color: #AC7434;"><b>$22.02</b></h4>
+  <h5>Nourishing cream for dry to very dry skin that is also suitable for atopic dermatitis and psoriasis.</h5>
+  <button class="btn btn-dark px-4 rounded-pill">Buy Now</button>
+  </div>
+       <div class="col" style="width: 50px" align="center"><img style="width: 300px; height: 300px;" src ="img/p3.jpg" 
+  class="img-thumbnail"
+  alt="CETAPHIL GENTLE SKIN CLEANSER"/> 
+  <br> <br>
+  <h4 align="center"><b>Cetaphil Gental Skin Cleanser 1L</b></h4>
+  <h4 align="center" style="color: #AC7434;"><b>$21.75</b></h4>
+  <h5>A mild, non-irritating formulation that soothes your skin as it cleanse.</h5>
+  <button class="btn btn-dark px-4 rounded-pill">Buy Now</button>
+  </div>
+        <div class="col" style="width: 50px" align="center"><img style="width: 300px; height: 300px;" src ="img/p4.jpg" 
+  class="img-thumbnail"
+  alt="URIAGE Xemose Toner"/> 
+  <br> <br>
+  <h4 align="center"><b>URIAGE Xemose Toner 250 ml</b></h4>
+  <h4 align="center" style="color: #AC7434;"> <b>$26.24</b></h4>
+  <h5>All-in-one care solution to deep-clean pores as well as soothe and strengthen skin barriers.</h5>
+  <button class="btn btn-dark px-4 rounded-pill">Buy Now</button>
+  </div>
+    </div>
+</div>
+</div>
+
+<!-- Space between sections -->
+<div class="section-spacing"></div>
+
+<div class="section-wrapper">
+<div class="product-section container">
+    <h2 class="text-center mb-5">Shop by Categories</h2>
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4 justify-content-center">
+        <!-- Cleansers -->
+        <div class="col">
+            <div class="product-col text-center">
+                <img src="img/p5.jpg" class="img-fluid rounded-circle mb-3" alt="Cleansers"/>
+                <h4>Cleansers</h4>
+                <button class="btn btn-dark px-4 rounded-pill">Buy Now</button>
+            </div>
+        </div>
+        
+        <!-- Toners -->
+        <div class="col">
+            <div class="product-col text-center">
+                <img src="img/p6.jpg" class="img-fluid rounded-circle mb-3" alt="Toners"/>
+                <h4>Toners</h4>
+                <button class="btn btn-dark px-4 rounded-pill">Buy Now</button>
+            </div>
+        </div>
+        
+        <!-- Serums -->
+        <div class="col">
+            <div class="product-col text-center">
+                <img src="img/p7.jpg" class="img-fluid rounded-circle mb-3" alt="Serums"/>
+                <h4>Serums</h4>
+                <button class="btn btn-dark px-4 rounded-pill">Buy Now</button>
+            </div>
+        </div>
+        
+        <!-- Moisturizer -->
+        <div class="col">
+            <div class="product-col text-center">
+                <img src="img/p8.jpg" class="img-fluid rounded-circle mb-3" alt="Moisturizer"/>
+                <h4>Moisturizer</h4>
+                <button class="btn btn-dark px-4 rounded-pill">Buy Now</button>
+            </div>
+        </div>
+        
+        <!-- Acne treatment -->
+        <div class="col">
+            <div class="product-col text-center">
+                <img src="img/p9.jpg" class="img-fluid rounded-circle mb-3" alt="Acne treatment"/>
+                <h4>Acne treatment</h4>
+                <button class="btn btn-dark px-4 rounded-pill">Buy Now</button>
+            </div>
+        </div>
+        
+        <!-- Sunscreen -->
+        <div class="col">
+            <div class="product-col text-center">
+                <img src="img/p10.jpg" class="img-fluid rounded-circle mb-3" alt="Sun screen"/>
+                <h4>Sunscreen</h4>
+                <button class="btn btn-dark px-4 rounded-pill">Buy Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Space between sections -->
+<div class="section-spacing"></div>
+
+<div class="section-wrapper">
+<div class="product-section container">
+    <h2 class="text-center mb-5">Featured Products</h2>
+    <div class="row justify-content-center g-4">
+        <!-- Product Card 1 -->
+        <div class="product-col col-md-4">
+            <div class="product-card">
+                <h3><b>Clinique</b></h3>
+                <p>Ultra-gentle regimen designed specifically for skin prone to persistent, visible redness and blotchiness, including skin experiencing rosacea.</p>
+                <div class="product-image">
+                    <img src="img/p11.jpg" class="img-fluid" alt="Skincare Product"/>
+                </div>
+                <h3 align="center" style="color: #AC7434;"> <b>$38.24</b></h3>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="product-col col-md-4">
+            <div class="product-card">
+                <h3><b>Mario Badescu</b></h3>
+                <p>Facial Spray With Aloe, Herbs and Rosewater. Cult-favorite face mist infused with rejuvenating Rose and clarifying Thyme.</p>
+                <div class="product-image">
+                    <img src="img/p12.jpg" class="img-fluid" alt="Skincare Product"/>
+                </div>
+                <h3 align="center" style="color: #AC7434;"> <b>$16.00</b></h3>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="product-col col-md-4">
+            <div class="product-card">
+                <h3><b>OSEA</b></h3>
+                <p>Atmosphere Protection Cream. Lightweight, daily moisturizer to protect against environmental stressors for healthy, radiant skin</p>
+                <div class="product-image">
+                    <img src="img/p13.jpg" class="img-fluid" alt="Skincare Product"/>
+                </div>
+                <h3 align="center" style="color: #AC7434;"> <b>$31.09</b></h3>
+                <button class="add-to-cart">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- Space between sections -->
+<div class="section-spacing"></div>
+
+<div class="section-wrapper">
+  <div class="product-section container">
+      <h2 class="section-title">Trending Products</h2>
+      <div class="row justify-content-center g-4">
+          <!-- Product Card 1 -->
+          <div class="col-md-4">
+              <div class="modern-card">
+                  <div class="card-image">
+                      <img src="img/p14.jpg" alt="Radiant Creamy Concealer"/>
+                      <div class="hover-overlay">
+                          <button class="quick-add">Quick Add</button>
+                      </div>
+                  </div>
+                  <div class="card-content">
+                      <h3><b>Nars Radiant Creamy Concealer</b></h3>
+                      <p class="price">$29.99</p>
+                      <div class="rating">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star-half-alt"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+        
+          <!-- Product Card 2 -->
+          <div class="col-md-4">
+            <div class="modern-card">
+                <div class="card-image">
+                    <img src="img/p15.jpg" alt="Skincare Product"/>
+                    <div class="hover-overlay">
+                        <button class="quick-add">Quick Add</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3><b>Jane Iredale PurePressed Blush</b></h3>
+                    <p class="price">$24.99</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+          <!-- Product Card 3 -->
+          <div class="col-md-4">
+            <div class="modern-card">
+                <div class="card-image">
+                    <img src="img/p16.jpg" alt="Skincare Product"/>
+                    <div class="hover-overlay">
+                        <button class="quick-add">Quick Add</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>RMS Beauty Lip2Cheek</h3>
+                    <p class="price">$30.00</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+</div>
+<br>
+
+
+
+<footer>
+    <div class="information">
+        <h3>Information</h3>
+        <p>About Us</p>
+        <p>Contact</p>
+        <p>Terms of Service</p>
+        <p>Privacy Policy</p>
+    </div>
+
+    <div class="stay-connected">
+        <h3>Stay Connected</h3>
+        <div class="social-icons">
+           <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <div class="newsletter">
+        <h3>Sign up for our newsletter</h3>
+        <div class="newsletter-form">
+            <input type="email" placeholder="Enter email">
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const dropBtn = document.querySelector('.dropbtn');
+    const dropContent = document.querySelector('.dropdown-content');
+    
+    dropBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        dropContent.classList.toggle('show');
+    });
+    
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function(e) {
+        if (!e.target.matches('.dropbtn')) {
+            if (dropContent.classList.contains('show')) {
+                dropContent.classList.remove('show');
+            }
+        }
+    });
+});
+</script>
+</html>

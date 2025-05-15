@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Vevana Log-In</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/customstyle.css" />
+
+    <style>
+        body {
+            font-family: 'Prompt', serif;
+            background-color: #FAF8F5;
+            text-align: center;
+            line-height: 1.6;
+            color: #54463A;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fffff0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+
+        }
+
+        h1 {
+            color: #AC7434;
+            font-family:    Prata;
+            font-size:  80px;
+        }
+
+        .input-group {
+            width: 100%;
+            display: flex;
+            gap: 10px;
+        }
+
+        .input-group input {
+            width: 100%;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #F7C7CE;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+
+        }
+
+        .button {
+            width: 100%;
+            background-color: #AC7434;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 18px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button a {
+    text-decoration: none; /* Removes underline */
+    color: #fffff0; /* Sets text color to match button */
+    display: block; /* Makes the link fill the button */
+    width: 100%; /* Ensures full button width */
+    height: 100%; /* Ensures full button height */
+}
+        .button:hover {
+            background-color: #AC7434;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .login-link a {
+            color: #AC7434;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 20px;
+            color:  black;
+        }
+
+        p {
+            font-size: 14px;
+            color: #7A6848;
+        }
+
+        p a {
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+        }
+
+        .social-signup {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .social-signup a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        .social-signup a.google {
+            background-color: #db4437;
+        }
+
+        .social-signup a.facebook {
+            background-color: #3b5998;
+        }
+
+        .social-signup a.instagram {
+            background-color: #e1306c;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Log-In</h1>
+        <input type="email" placeholder="Email">
+        
+        <input type="password" placeholder="Password">
+        
+        <p style="text-align:right"> <b> <u> Forgot Password? </u> </b> </p>
+
+        <button class="button">
+    <a href="home.html">Log-In</a>
+</button>
+
+
+        <div class="social-signup">
+            <a href="https://www.google.com" target="_blank" class="google">
+                    <i class="fab fa-google fa-beat-fade fa-xl"></i>
+                </a>
+
+                <a href="https://www.facebook.com" target="_blank" class="facebook">
+                    <i class="fa-brands fa-facebook fa-beat-fade fa-xl"></i>
+                </a>
+
+                <a href="https://www.instagram.com" target="_blank" class="instagram">
+                    <i class="fab fa-instagram fa-beat-fade fa-xl"></i>
+                </a>
+        </div>
+
+        <div class="login-link">
+            <p>Don't have an account? Press to <a href="signup.html"> <b> SignUp </b> </a></p>
+        </div>
+
+        <footer>
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2025 Copyright:
+                <a class="text-reset fw-bold" href="landing.html">vivana.com</a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

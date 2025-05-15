@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Notifications - vivana.com</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/customstyle.css" />
+    <link rel="stylesheet" type="text/css" href="css/navstyle.css">
+    <link rel="stylesheet" type="text/css" href="css/footerstyle.css">
+
+    <style>
+      .notification-container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 20px;
+      }
+
+      .notification-content {
+        flex-grow: 1;
+      }
+
+      .notification-title {
+        font-weight: bold;
+        color: #54463A;
+        margin-bottom: 5px;
+      }
+
+      .notification-time {
+        color: #888;
+        font-size: 0.8rem;
+      }
+
+      .no-notifications {
+        text-align: center;
+        color: #888;
+        padding: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+  <a href="landing.html">
+      <i class="fa-solid fa-feather fa-bounce fa-xl" style="color: #54463A;"> VIVANA </i>
+  </a>
+  <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="tips.html">Tips</a>
+      <a href="faq.html">FAQ</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="contactus.html">Contact Us</a>
+  </div>
+  <div class="icons">
+      <a href="history.html"><i class="fas fa-shopping-cart"></i></a>
+      <a href="notification.html"><i class="fas fa-info-circle notification-icon"></i></a>
+      <a href="profile.html"><i class="fas fa-user"></i></a>
+  </div>
+</nav>
+</header>
+
+    <main>
+      <div class="notification-container">
+        <h2 style="color: #54463A; margin-bottom: 2rem;">Notifications</h2>
+        
+        <div class="notification-item">
+          <div class="notification-icon">
+            <i class="fas fa-tag" style="color: #54463A;"></i>
+          </div>
+          <div class="notification-content">
+            <div class="notification-title">Special Offer!</div>
+            <div class="notification-text">Get 20% off on all makeup products this weekend!</div>
+            <div class="notification-time">2 hours ago</div>
+          </div>
+        </div>
+
+        <div class="notification-item">
+          <div class="notification-icon">
+            <i class="fas fa-box" style="color: #54463A;"></i>
+          </div>
+          <div class="notification-content">
+            <div class="notification-title">Order Shipped</div>
+            <div class="notification-text">Your order #12345 has been shipped and will arrive in 2-3 days.</div>
+            <div class="notification-time">1 day ago</div>
+          </div>
+        </div>
+
+        <div class="notification-item">
+          <div class="notification-icon">
+            <i class="fas fa-heart" style="color: #54463A;"></i>
+          </div>
+          <div class="notification-content">
+            <div class="notification-title">New Collection Available</div>
+            <div class="notification-text">Check out our latest summer skincare collection!</div>
+            <div class="notification-time">2 days ago</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="information">
+        <h3>Information</h3>
+        <a href="aboutus.html"><p>About Us</p></a>
+        <a href="contactus.html"><p>Contact</p></a>
+        <a href="faq.html"><p>Terms of Service</p></a>
+        <a href="privacy.html"><p>Privacy Policy</p></a>
+      </div>
+
+      <div class="stay-connected">
+        <h3>Stay Connected</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="newsletter">
+        <h3>Sign up for our newsletter</h3>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Enter email">
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const dropBtn = document.querySelector('.dropbtn');
+        const dropContent = document.querySelector('.dropdown-content');
+        
+        dropBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          dropContent.classList.toggle('show');
+        });
+        
+        window.addEventListener('click', function(e) {
+          if (!e.target.matches('.dropbtn')) {
+            if (dropContent.classList.contains('show')) {
+              dropContent.classList.remove('show');
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+
+

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title> vivana.com </title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/customstyle.css" />
+     <link rel="stylesheet" type="text/css" href="css/navstyle.css">
+  <link rel="stylesheet" type="text/css" href="css/footerstyle.css">
+    <style>
+        body {
+            font-family: prompt, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .order-card {
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+        
+        .order-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .tracking-step {
+            position: relative;
+            padding-bottom: 30px;
+        }
+        
+        .tracking-step::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 30px;
+            bottom: 0;
+            width: 2px;
+            background: #fffff0;
+        }
+        
+        .tracking-step:last-child::before {
+            display: none;
+        }
+        
+        .step-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 15px;
+        }
+        
+        .step-inactive .step-icon {
+            background: #fffff0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+  <a href="landing.html">
+      <i class="fa-solid fa-feather fa-bounce fa-xl" style="color: #54463A;"> VIVANA </i>
+  </a>
+  <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="tips.html">Tips</a>
+      <a href="faq.html">FAQ</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="contactus.html">Contact Us</a>
+  </div>
+  <div class="icons">
+      <a href="history.html"><i class="fas fa-shopping-cart"></i></a>
+      <a href="notification.html"><i class="fas fa-info-circle notification-icon"></i></a>
+      <a href="profile.html"><i class="fas fa-user"></i></a>
+  </div>
+</nav>
+</header>
+
+    <main>
+<div class="container my-5">
+    <h2 class="text-center mb-4">Order History & Tracking</h2>
+    
+    <div class="row">
+        <!-- Order Cards -->
+        <div class="col-md-8">
+            <div class="order-card card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <h5 class="card-title">Order #12345</h5>
+                        <span class="badge bg-success">Delivered</span>
+                    </div>
+                    <p class="card-text">
+                        <small class="text-muted">Ordered on: January 15, 2025</small>
+                    </p>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p>Items: Cleanser, Moisturizer</p>
+                            <p>Total: $45.99</p>
+                        </div>
+                        <div class="col-md-4 text-end">
+                            <button class="btn btn-primary btn-sm" onclick="showTracking('12345')">
+                                Track Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-card card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <h5 class="card-title">Order #12344</h5>
+                        <span class="badge bg-warning">In Transit</span>
+                    </div>
+                    <p class="card-text">
+                        <small class="text-muted">Ordered on: January 10, 2025</small>
+                    </p>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p>Items: Face Mask, Toner</p>
+                            <p>Total: $32.99</p>
+                        </div>
+                        <div class="col-md-4 text-end">
+                            <button class="btn btn-primary btn-sm" onclick="showTracking('12344')">
+                                Track Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tracking Details -->
+        <div class="col-md-4">
+            <div class="card" id="trackingDetails" style="display: none;">
+                <div class="card-body">
+                    <h5 class="card-title">Tracking Details</h5>
+                    <div id="trackingSteps">
+                        <!-- Tracking steps will be inserted here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+
+<footer>
+    <div class="information">
+        <h3>Information</h3>
+        <a href="aboutus.html"><p>About Us</p></a>
+        <a href="contactus.html"><p>Contact</p></a>
+        <a href="faq.html"><p>Terms of Service</p></a>
+        <a href="privacy.html>"><p>Privacy Policy</p></a>
+    </div>
+
+    <div class="stay-connected">
+        <h3>Stay Connected</h3>
+        <div class="social-icons">
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <div class="newsletter">
+        <h3>Sign up for our newsletter</h3>
+        <div class="newsletter-form">
+            <input type="email" placeholder="Enter email">
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const dropBtn = document.querySelector('.dropbtn');
+    const dropContent = document.querySelector('.dropdown-content');
+    
+    dropBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        dropContent.classList.toggle('show');
+    });
+    
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function(e) {
+        if (!e.target.matches('.dropbtn')) {
+            if (dropContent.classList.contains('show')) {
+                dropContent.classList.remove('show');
+            }
+        }
+    });
+});
+
+    const trackingData = {
+        '12345': [
+            { status: 'Order Placed', date: 'Jan 15, 2024', completed: true },
+            { status: 'Order Confirmed', date: 'Jan 15, 2024', completed: true },
+            { status: 'Shipped', date: 'Jan 16, 2024', completed: true },
+            { status: 'Delivered', date: 'Jan 18, 2024', completed: true }
+        ],
+        '12344': [
+            { status: 'Order Placed', date: 'Jan 10, 2024', completed: true },
+            { status: 'Order Confirmed', date: 'Jan 10, 2024', completed: true },
+            { status: 'Shipped', date: 'Jan 11, 2024', completed: true },
+            { status: 'Delivered', date: 'Jan 13, 2024', completed: false }
+        ]
+    };
+
+    function showTracking(orderId) {
+        const trackingDetails = document.getElementById('trackingDetails');
+        const trackingSteps = document.getElementById('trackingSteps');
+        trackingDetails.style.display = 'block';
+        
+        // Clear previous tracking steps
+        trackingSteps.innerHTML = '';
+        
+        // Add tracking steps
+        trackingData[orderId].forEach((step, index) => {
+            const stepElement = document.createElement('div');
+            stepElement.className = `tracking-step d-flex align-items-start ${step.completed ? '' : 'step-inactive'}`;
+            stepElement.innerHTML = `
+                <div class="step-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div>
+                    <h6 class="mb-1">${step.status}</h6>
+                    <p class="text-muted mb-0"><small>${step.date}</small></p>
+                </div>
+            `;
+            trackingSteps.appendChild(stepElement);
+        });
+    }
+</script>
+
+</body>
+</html>

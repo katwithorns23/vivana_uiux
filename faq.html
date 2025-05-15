@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title> FAQ Section </title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/customstyle.css" />
+     <link rel="stylesheet" type="text/css" href="css/navstyle.css">
+  <link rel="stylesheet" type="text/css" href="css/footerstyle.css">
+    <style>
+      .faq-section {
+    padding: 40px 20px;
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: bold;
+    /* Optional decorative underline */
+    position: relative;
+}
+
+        .faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.faq-item {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question {
+  font-size: 16px;
+  color: #1a1a1a;
+  font-weight: 500;
+  margin: 0;
+}
+
+.faq-toggle {
+  color: #666;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-item.active {
+  background: #ffffff;
+}
+
+.faq-item.active .faq-toggle {
+  transform: rotate(180deg);
+}
+
+.faq-item.active .faq-content {
+  max-height: 1000px;
+  margin-top: 16px;
+}
+
+.faq-close {
+  display: none;
+  color: #666;
+  cursor: pointer;
+  content: "▲";
+  font-size: 14px;
+}
+
+.faq-item.active .faq-close {
+  display: block;
+}
+
+.faq-item .faq-toggle::after {
+  content: "▼";
+}
+
+.faq-item.active .faq-toggle::after {
+  content: "▲";
+}
+    </style>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+  <a href="landing.html">
+      <i class="fa-solid fa-feather fa-bounce fa-xl" style="color: #54463A;"> VIVANA </i>
+  </a>
+  <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="tips.html">Tips</a>
+      <a href="faq.html">FAQ</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="contactus.html">Contact Us</a>
+  </div>
+  <div class="icons">
+      <a href="history.html"><i class="fas fa-shopping-cart"></i></a>
+      <a href="notification.html"><i class="fas fa-info-circle notification-icon"></i></a>
+      <a href="profile.html"><i class="fas fa-user"></i></a>
+  </div>
+</nav>
+</header>
+
+<main>
+  <div class="faq-section">
+    <h2 class="faq-title"> 🛍 General Questions </h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-question">What is Vivana?</h3>
+              <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-content">
+              <p>Vivana is an online cosmetics store offering high-quality beauty products, skincare, makeup, and personal care items from top brands.</p>
+            </div>
+          </div>
+    
+        <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-question">Do I need to create an account to shop?</h3>
+              <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-content">
+              <p>No, you can checkout as a guest. However, creating an account allows you to track orders, save favorites, and receive exclusive offers.</p>
+            </div>
+          </div>
+
+        <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-question">Where is Vivana based?</h3>
+              <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-content">
+              <p>Vivana operates online and delivers nationwide (or internationally, if applicable).</p>
+            </div>
+          </div>
+
+        <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-question">Are your products authentic?</h3>
+              <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-content">
+              <p>Yes! We source our products directly from authorized brands and distributors to ensure authenticity.</p>
+            </div>
+          </div>
+        </div>
+      
+    <br>
+    <h2 class="faq-title"> 🚚 Orders & Shipping </h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-question">How do I place an order?</h3>
+              <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-content">
+              <p>Simply browse our website, add items to your cart, proceed to checkout, and make payment. You will receive an order confirmation email after a successful purchase.</p>
+            </div>
+          </div>
+
+        <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-question">What payment methods do you accept?</h3>
+              <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-content">
+              <p>We accept credit/debit cards, PayPal, and other secure payment options (specify available methods).</p>
+            </div>
+          </div>
+
+        <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-question">How long does shipping take?</h3>
+              <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-content">
+              <p>Shipping time depends on your location and selected shipping method. Standard shipping takes 7-10 days, while express delivery takes 3-5 days.</p>
+            </div>
+          </div>
+
+        <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-question">How can I track my order?</h3>
+              <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-content">
+              <p>Once your order is shipped, you will receive a tracking number via email. You can also track it from your account under "My Orders."</p>
+            </div>
+          </div>
+
+        <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-question">Do you offer international shipping?</h3>
+              <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-content">
+              <p>Yes! We ship to multiple countries. Shipping rates and delivery times vary by location.</p>
+            </div>
+          </div>
+          </div>
+
+        <br>
+    <h2 class="faq-title"> 📦 Returns & Exchanges </h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-question">What is your return policy?</h3>
+              <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-content">
+              <p>We accept returns within 30 days of delivery, provided the product is unused, unopened, and in its original packaging.</p>
+            </div>
+          </div>
+
+        <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-question">How do I initiate a return?</h3>
+              <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-content">
+              <p>Contact our support team or call our phone number to request a return.</p>
+            </div>
+          </div>
+
+        <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-question">Do you offer refunds?</h3>
+              <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-content">
+              <p>Yes, refunds are processed after the returned item is inspected. The amount will be credited to your original payment method within 2 days.</p>
+            </div>
+          </div>
+
+        <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-question">Can I exchange a product?</h3>
+              <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-content">
+              <p>Exchanges are available for defective or damaged items. Contact our support team for assistance.</p>
+            </div>
+          </div>
+          </div>
+
+    <br>
+    <h2 class="faq-title"> 🛒 Products & Availability </h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-question">What if a product is out of stock?</h3>
+              <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-content">
+              <p>You can sign up for restock notifications by clicking "Notify Me" on the product page.</p>
+            </div>
+          </div>
+
+        <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-question">Do you sell cruelty-free or vegan products?</h3>
+              <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-content">
+              <p>Yes! We have a dedicated section for cruelty-free and vegan beauty products. Look for the labels on product pages.</p>
+            </div>
+          </div>
+          </div>
+
+    <br>
+    <h2 class="faq-title"> 🔒 Account & Security </h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-question">How do I create an account?</h3>
+              <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-content">
+              <p>Click on "Sign Up" at the top of the website, fill in your details, and verify your email.</p>
+            </div>
+          </div>
+
+        <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-question">I forgot my password. What should I do?</h3>
+              <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-content">
+              <p>Click "Forgot Password" on the login page and follow the steps to reset your password.</p>
+            </div>
+          </div>
+
+        <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-question">Is my personal information secure?</h3>
+              <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-content">
+              <p>Yes, we use industry-standard encryption and secure payment gateways to protect your data.</p>
+            </div>
+          </div>
+          </div>
+
+    <br>
+    <h2 class="faq-title"> 📞 Customer Support </h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-question">How can I contact customer service?</h3>
+              <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-content">
+              <p>You can reach us via:
+                <br>
+                Email: support@vivana.com
+                <br>
+                Live Chat: Available on our website facebook page
+                <br>
+                Phone: 09-401234567
+            </div>
+          </div>
+
+        <div class="faq-item">
+            <div class="faq-header">
+              <h3 class="faq-question">What are your customer service hours?</h3>
+              <span class="faq-toggle"></span>
+            </div>
+            <div class="faq-content">
+              <p>Our support team is available [Days & Hours of Operation].</p>
+            </div>
+          </div>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <div class="information">
+        <h3>Information</h3>
+        <p>About Us</p>
+        <p>Contact</p>
+        <p>Terms of Service</p>
+        <p>Privacy Policy</p>
+    </div>
+
+    <div class="stay-connected">
+        <h3>Stay Connected</h3>
+        <div class="social-icons">
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <div class="newsletter">
+        <h3>Sign up for our newsletter</h3>
+        <div class="newsletter-form">
+            <input type="email" placeholder="Enter email">
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const dropBtn = document.querySelector('.dropbtn');
+    const dropContent = document.querySelector('.dropdown-content');
+    
+    dropBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        dropContent.classList.toggle('show');
+    });
+    
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function(e) {
+        if (!e.target.matches('.dropbtn')) {
+            if (dropContent.classList.contains('show')) {
+                dropContent.classList.remove('show');
+            }
+        }
+    });
+});
+        document.querySelectorAll('.faq-item').forEach(item => {
+  item.addEventListener('click', (e) => {
+    if (e.target.classList.contains('faq-close')) {
+      item.classList.remove('active');
+      return;
+    }
+    
+    // Close other open items
+    document.querySelectorAll('.faq-item.active').forEach(activeItem => {
+      if (activeItem !== item) {
+        activeItem.classList.remove('active');
+      }
+    });
+    
+    item.classList.toggle('active');
+  });
+});
+    </script>
+</body>
+</html>

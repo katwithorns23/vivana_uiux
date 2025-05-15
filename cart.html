@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title> Cart </title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/customstyle.css" />
+     <link rel="stylesheet" type="text/css" href="css/navstyle.css">
+  <link rel="stylesheet" type="text/css" href="css/footerstyle.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .page-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 400px;  /* Adjust the 400px to your preferred width */
+    gap: 32px;
+}
+
+.cart-section {
+    padding-right: 24px;
+}
+
+        .cart-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.cart-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.cart-header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.item-count {
+    color: #666;
+    font-size: 14px;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.item-image img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.item-details h2 {
+    margin: 0 0 12px 0;
+    font-size: 18px;
+}
+
+.item-color {
+    display: flex;
+    gap: 8px;
+}
+
+.item-color .label {
+    color: #666;
+}
+
+.item-actions {
+    text-align: right;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px;
+    margin-bottom: 12px;
+}
+
+.qty-btn {
+    background: none;
+    border: none;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+.quantity-controls input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    -moz-appearance: textfield;
+}
+
+.quantity-controls input::-webkit-outer-spin-button,
+.quantity-controls input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.promo-banner {
+    margin-top: 20px;
+    padding: 16px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.discount-icon {
+    font-size: 20px;
+    color: #666;
+}
+
+.promo-banner p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.order-summary {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.order-summary h2 {
+    font-size: 20px;
+    margin: 0 0 24px 0;
+}
+
+.summary-details {
+    margin-bottom: 24px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.summary-row span {
+    font-size: 14px;
+}
+
+.free-shipping {
+    color: #00a862;  /* Green color for Free text */
+}
+
+.total {
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.delivery-estimate {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.coupon-section {
+    margin-bottom: 24px;
+}
+
+.coupon-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.coupon-input input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.coupon-icon {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+}
+
+.checkout-button {
+    width: 100%;
+    padding: 16px;
+    background-color: #8d7b68;  /* Brown color matching your image */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.checkout-button:hover {
+    background-color: #7d6b58;
+}
+
+/* Optional: Add responsive styles */
+@media (max-width: 1024px) {
+        .page-container {
+            grid-template-columns: 1fr;  /* Stack sections vertically */
+            gap: 24px;
+            padding: 16px;
+        }
+
+        .cart-section {
+            padding-right: 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .cart-item {
+            grid-template-columns: 1fr;  /* Stack item content vertically */
+            gap: 16px;
+            text-align: center;
+        }
+
+        .item-image img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .item-actions {
+            text-align: center;
+        }
+
+        .quantity-controls {
+            justify-content: center;
+            margin: 0 auto;
+            max-width: 150px;
+        }
+
+        .cart-header {
+            flex-direction: column;
+            text-align: center;
+            gap: 8px;
+        }
+
+        .promo-banner {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .order-summary {
+            padding: 16px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .cart-container {
+            padding: 12px;
+        }
+
+        .cart-header h1 {
+            font-size: 20px;
+        }
+
+        .item-details h2 {
+            font-size: 16px;
+        }
+
+        .price {
+            font-size: 16px;
+        }
+
+        .summary-row span {
+            font-size: 13px;
+        }
+
+        .delivery-estimate {
+            flex-direction: column;
+            text-align: center;
+            gap: 4px;
+        }
+
+        .checkout-button {
+            padding: 12px;
+            font-size: 14px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+  <a href="landing.html">
+      <i class="fa-solid fa-feather fa-bounce fa-xl" style="color: #54463A;"> VIVANA </i>
+  </a>
+  <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="tips.html">Tips</a>
+      <a href="faq.html">FAQ</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="contactus.html">Contact Us</a>
+  </div>
+  <div class="icons">
+      <a href="history.html"><i class="fas fa-shopping-cart"></i></a>
+      <a href="notification.html"><i class="fas fa-info-circle notification-icon"></i></a>
+      <a href="profile.html"><i class="fas fa-user"></i></a>
+  </div>
+</nav>
+</header>
+
+    <main>
+    <div class="page-container">
+    <!-- Left Side - Cart Items -->
+    <div class="cart-section">
+        <header class="cart-header">
+            <h1>Cart</h1>
+            <span class="item-count">2 ITEMS</span>
+        </header>
+    
+        <div class="cart-items">
+            <!-- Cart Item 1 -->
+            <div class="cart-item">
+                <div class="item-image">
+                    <img src="img/Makeup09.jpg" alt="Product">
+                </div>
+                
+                <div class="item-details">
+                    <h2>Dior Addict Lip Glow</h2>
+                    <div class="item-color">
+                        <span class="label">Color</span>
+                        <span class="value">01</span>
+                    </div>
+                </div>
+    
+                <div class="item-actions">
+                    <div class="price">$40</div>
+                    <div class="quantity-controls">
+                        <button class="qty-btn">-</button>
+                        <input type="number" value="1" min="1">
+                        <button class="qty-btn">+</button>
+                    </div>
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+
+           
+            
+               
+                    <!-- Cart Item 2 -->
+                    <div class="cart-item">
+                        <div class="item-image">
+                            <img src="img/Makeup09.jpg" alt="Product">
+                        </div>
+                        
+                        <div class="item-details">
+                            <h2>Dior Addict Lip Glow</h2>
+                            <div class="item-color">
+                                <span class="label">Color</span>
+                                <span class="value">01</span>
+                            </div>
+                        </div>
+            
+                        <div class="item-actions">
+                            <div class="price">$40</div>
+                            <div class="quantity-controls">
+                                <button class="qty-btn">-</button>
+                                <input type="number" value="1" min="1">
+                                <button class="qty-btn">+</button>
+                            </div>
+                            <button class="remove-btn">Remove</button>
+                        </div>
+                    </div>
+
+                    <div class="promo-banner">
+                        <span class="discount-icon">%</span>
+                        <p>10% Instant Discount with Kpay on a min spend of $50.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - Order Summary -->
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                
+                <div class="summary-details">
+                    <div class="summary-row">
+                        <span>Price</span>
+                        <span>$80</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Discount</span>
+                        <span>$10</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span class="free-shipping">Free</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Coupon Applied</span>
+                        <span>$0.00</span>
+                    </div>
+                    
+                    <div class="summary-row total">
+                        <span>TOTAL</span>
+                        <span>$70</span>
+                    </div>
+                    
+                    <div class="delivery-estimate">
+                        <span>Estimated Delivery by</span>
+                        <span>01 Mar, 2025</span>
+                    </div>
+                </div>
+                
+                <div class="coupon-section">
+                    <div class="coupon-input">
+                        <input type="text" placeholder="Coupon Code">
+                        <button class="coupon-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 12v-2h-2V7h-3V5h-2v2h-2V5H9v2H6v3H4v2h2v2H4v2h2v3h3v2h2v-2h2v2h2v-2h3v-3h2v-2h-2v-2h2zm-6 0h-4v-2h4v2z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <a href="shipping.html"><button class="checkout-button">Proceed to Checkout</button></a>
+            </div>
+            </div>
+            </div>
+            </div>
+</main>
+
+<footer>
+    <div class="information">
+        <h3>Information</h3>
+        <a href="aboutus.html"><p>About Us</p></a>
+        <a href="contactus.html"><p>Contact</p></a>
+        <a href="faq.html"><p>Terms of Service</p></a>
+        <a href="privacy.html>"><p>Privacy Policy</p></a>
+    </div>
+
+    <div class="stay-connected">
+        <h3>Stay Connected</h3>
+        <div class="social-icons">
+            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <div class="newsletter">
+        <h3>Sign up for our newsletter</h3>
+        <div class="newsletter-form">
+            <input type="email" placeholder="Enter email">
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const dropBtn = document.querySelector('.dropbtn');
+    const dropContent = document.querySelector('.dropdown-content');
+    
+    dropBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        dropContent.classList.toggle('show');
+    });
+    
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function(e) {
+        if (!e.target.matches('.dropbtn')) {
+            if (dropContent.classList.contains('show')) {
+                dropContent.classList.remove('show');
+            }
+        }
+    });
+});
+</script>
+</html>
+</body>
+</html>
